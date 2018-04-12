@@ -1,0 +1,4 @@
+# For SSH. Bashrc isn't sourced otherwise.
+if [ -f ~/.bashrc ]; then
+      . ~/.bashrc
+fi

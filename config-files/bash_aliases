@@ -1,0 +1,18 @@
+# Sudo trick so aliases are evaluated on the command being passed to sudo.
+# If an alias ends in whitespace or tab, then the next command is also
+# evaluted to see if it is an alias.
+alias sudo='sudo '
+
+# vi aliases.
+alias vi=vim
+
+# ls aliases.
+alias ls='ls --color=auto'
+alias ll='ls -la --color=auto'
+
+# Python.
+alias p3='python3'
+
+# TODO Remove this when mono 5.12 is released.
+alias mono='TERM=xterm mono'
+alias mkbundle='TERM=xterm mkbundle'
