@@ -1,17 +1,20 @@
+BACKUP_PATH="$HOME/.dano-home-backup"
+
 # If a backup folder already exists, then ERROR
-if [ -d "$HOME/.dano-home-backup" ]; then
-   echo "ERROR: A backup folder already exists at \"$HOME/.dano-home-backup\". \
+if [ -d "$BACKUP_PATH" ]; then
+   echo "ERROR: A backup folder already exists at \"$BACKUP_PATH\". \
          Run the uninstall script located there first." 
    exit 1
 fi
 
 # Backup all affected files
-mkdir -p ~/.dano-home-backup
+mkdir -p "$BACKUP_PATH"
 mv "$HOME/.bashrc" \
    "$HOME/.bash_profile" \
    "$HOME/.bash_aliases" \
    "$HOME/.vimrc" \
-   '~/.dano-home-backup' 2> /dev/null
+   "$BACKUP_PATH" 2> /dev/null
+mv "$XDG_CONFIG_HOME/sway/config" "$BACKUP_PATH/sway" 2> /dev/null
 
 # Create symbolic links to the config files specified in this repository.
 ln -s "$PWD/config-files/bashrc" "$HOME/.bashrc"
