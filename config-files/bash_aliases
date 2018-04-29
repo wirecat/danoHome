@@ -16,3 +16,9 @@ alias p3='python3'
 # TODO Remove this when mono 5.12 is released.
 alias mono='TERM=xterm mono'
 alias mkbundle='TERM=xterm mkbundle'
+
+# Make find a bit easier to use... because I like regex
+alias dfind='find . -regextype posix-extended'
+
+# Make pacman pretty
+alias pacman='pacman --color=always '
