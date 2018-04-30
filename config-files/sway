@@ -65,6 +65,9 @@ input "2:14:ETPS/2_Elantech_Touchpad" {
 
     # exit sway (logs you out of your wayland session)
     bindsym $mod+Shift+e exit
+
+    # Lock the session
+    bindsym $mod+n exec swaylock
 #
 # Moving around:
 #
