@@ -67,7 +67,7 @@ input "2:14:ETPS/2_Elantech_Touchpad" {
     bindsym $mod+Shift+e exit
 
     # Lock the session
-    bindsym $mod+n exec swaylock
+    bindsym $mod+n exec swaylock -c272822
 
 #
 # Audio controls
