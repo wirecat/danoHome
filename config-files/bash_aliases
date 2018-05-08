@@ -4,8 +4,7 @@
 alias sudo='sudo '
 
 # vi aliases.
-alias vi=nvim
-alias vim=nvim
+alias vi=vim
 
 # ls aliases.
 alias ls='ls --color=auto'
