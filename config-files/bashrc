@@ -5,7 +5,7 @@
 PS1='[\[\033[36m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]] $ '
 
 # Source the bash aliases. Only contains aliases.
-. /home/dano/.bash_aliases
+. /home/$USER/.bash_aliases
 
 # Setup Base16 so it is easy to change themes from any terminal.
 BASE16_SHELL=$HOME/.config/base16-shell/
@@ -18,7 +18,7 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 . /etc/profile.d/vte.sh
 
 # Add home bin to path.
-export PATH=$PATH:/home/danijohn/bin
+export PATH=$PATH:/home/$USER/bin
 
 # Attempting to tell everyone to use vim as the default editor.
 export VISUAL=vim
