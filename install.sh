@@ -14,7 +14,6 @@ mv "$HOME/.bashrc" \
    "$HOME/.bash_aliases" \
    "$HOME/.vimrc" \
    "$BACKUP_PATH" 2> /dev/null
-mv "$XDG_CONFIG_HOME/sway/config" "$BACKUP_PATH/sway" 2> /dev/null
 
 # Create symbolic links to the config files specified in this repository.
 ln -s "$PWD/config-files/bashrc" "$HOME/.bashrc"
