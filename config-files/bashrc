@@ -1,3 +1,6 @@
+# Prevents multiple sources
+BASHRC_RUN=yes
+
 # If not running interactively, don't do anything.
 [[ $- != *i* ]] && return
 
@@ -18,7 +21,16 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 . /etc/profile.d/vte.sh
 
 # Add home bin to path.
-export PATH=$PATH:/home/$USER/bin
+USR_BIN=/home/$USER/bin
+if [[ $PATH != *"$USR_BIN"* ]];then
+    export PATH=$PATH:$USR_BIN
+fi
+
+# Source the localrc if it exists
+#LOCALRC=$HOME/.localrc
+#if [ -f $LOCALRC ]; then
+#   . $HOME/.localrc
+#fi
 
 # Attempting to tell everyone to use vim as the default editor.
 export VISUAL=vim

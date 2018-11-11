@@ -1,7 +1,8 @@
 # For SSH. Bashrc isn't sourced otherwise.
-if [ -f ~/.bashrc ]; then
-      . ~/.bashrc
-fi
+[[ $BASHRC_RUN != yes && -f ~/.bashrc ]] && source ~/.bashrc
+
+# Source localrc if not already sourced and present
+[[ $LOCALRC_RUN != yes && -f ~/.localrc ]] && source ~/.localrc
 
 # Make history larger and ignore the duplicates
 export HISTCONTROL=ignoreboth
