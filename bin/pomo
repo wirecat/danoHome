@@ -1,2 +1,0 @@
-#!/usr/bin/sh
-termite --geometry=325x100 -e "tty-countdown -m 25" &
