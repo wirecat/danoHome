@@ -48,7 +48,7 @@ autocmd FileType make setlocal noexpandtab " Makefiles are special flowers and
 autocmd FileType python setlocal tabstop=4   " Sel coding standard says 4 spaces
 autocmd FileType cucumber setlocal tabstop=4 " for python. Expanding this to
                                              " feature files as well
-                                           
+
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
@@ -57,11 +57,15 @@ if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
+
+" Always turn on the spell checker.
+set spell
+
+" Make the spell check work with base16. The default highlighting doesn't work
+" so I went with underlines.
+hi clear SpellBad
+hi SpellBad cterm=underline
+
 " disables opaque background for use with Base16
 hi Normal ctermbg=none
 hi NonText ctermbg=none
-
-" Make trailing whitespace noticeable
-highlight BadWhite ctermbg=red guibg=red
-match BadWhite  /\s\+$/
-"match BadWhite  /\t\+/
