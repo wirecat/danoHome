@@ -6,6 +6,8 @@ set title           " Show the title of the file in the title of the terminal
 
 set tabstop=3       " Number of spaces that a <Tab> in the file counts for.
 
+set shiftwidth=3    " Number of spaces to indent when using '<' or '>'
+
 set expandtab       " Tabs will be automatically converted to spaces.
 
 set showcmd         " Show (partial) command in status line.
