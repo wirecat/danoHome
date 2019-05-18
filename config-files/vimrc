@@ -1,4 +1,5 @@
-runtime! archlinux.vim " Source the arch linux vim configuration first
+" DJ: Going to leave this off for a bit. Doesn't seem to add anything.
+"runtime! archlinux.vim " Source the arch linux vim configuration first
 
 set relativenumber  " Use relative numbers to make motions more useful
 
@@ -37,21 +38,25 @@ set autoindent      " Copy indent from current line when starting a new line
 set ruler           " Show the line and column number of the cursor position,
                     " separated by a comma.
 
-set background=dark " When set to "dark", Vim will try to use colors that look
-                    " good on a dark background. When set to "light", Vim will
-                    " try to use colors that look good on a light background.
-                    " Any other value is illegal.
+" DJJ: Going to leave this off for a bit. Breaks some syntax highlighting.
+"set background=dark " When set to "dark", Vim will try to use colors that look
+"                    " good on a dark background. When set to "light", Vim will
+"                    " try to use colors that look good on a light background.
+"                    " Any other value is illegal.
+"
+set mouse=          " Disable the use of the mouse.
 
-set mouse=          " Enable the use of the mouse.
-
-syntax on           " Turn on syntax highlighting.
+ syntax on           " Turn on syntax highlighting.
 
 autocmd FileType make setlocal noexpandtab " Makefiles are special flowers and
                                            " need tabs to behave correctly.
 
 autocmd FileType python setlocal tabstop=4   " Sel coding standard says 4 spaces
+autocmd FileType python setlocal shiftwidth=4
+
 autocmd FileType cucumber setlocal tabstop=4 " for python. Expanding this to
                                              " feature files as well
+autocmd FileType cucumber setlocal shiftwidth=4
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
@@ -68,7 +73,9 @@ set spell
 " Make the spell check work with base16. The default highlighting doesn't work
 " so I went with underlines.
 hi clear SpellBad
-hi SpellBad cterm=underline
+hi SpellBad    cterm=underline
+" I don't care about capitalization darn it!
+set spellcapcheck=
 
 " disables opaque background for use with Base16
 hi Normal ctermbg=none
