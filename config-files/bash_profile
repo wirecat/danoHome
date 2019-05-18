@@ -7,8 +7,3 @@
 # Make history larger and ignore the duplicates
 export HISTCONTROL=ignoreboth
 export HISTSIZE=5000
-
-# Startup X on login
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-   exec startx
-fi
