@@ -3,6 +3,8 @@
 
 set relativenumber  " Use relative numbers to make motions more useful
 
+set number          " Use number so we know what the current line number is
+
 set title           " Show the title of the file in the title of the terminal
 
 set tabstop=3       " Number of spaces that a <Tab> in the file counts for.
@@ -12,8 +14,6 @@ set shiftwidth=3    " Number of spaces to indent when using '<' or '>'
 set expandtab       " Tabs will be automatically converted to spaces.
 
 set showcmd         " Show (partial) command in status line.
-
-set number          " Show line numbers.
 
 set showmatch       " When a bracket is inserted, briefly jump to the matching
                     " one. The jump is only done if the match can be seen on the
