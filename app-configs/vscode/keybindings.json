@@ -1,0 +1,43 @@
+// Place your key bindings in this file to override the defaults
+[
+    // Togglign the activity bar
+    {
+        "key": "shift+cmd+a",
+        "command": "-notification.acceptPrimaryAction",
+        "when": "notificationFocus || notificationToastsVisible"
+    },
+    {
+        "key": "shift+cmd+a",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+
+    // File tree navigation
+    {
+        "key": "n",
+        "command": "explorer.newFile",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "r",
+        "command": "renameFile",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "shift+n",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "deleteFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        // Bounces back to the editor from file explorer
+        "key": "Space e",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "filesExplorerFocus && !inputFocus"
+    }
+
+    // Others
+]

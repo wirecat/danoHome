@@ -1,0 +1,20 @@
+// Vim
+"vim.leader": "<Space>",
+"vim.normalModeKeyBindingsNonRecursive": [
+    // Switch buffers
+    { "before": ["<S-h>"], "commands": [":bp"] },
+    { "before": ["<S-l>"], "commands": [":bn"] },
+
+    // Splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    // panes
+    { "before": ["leader", "h"], "commands": ["workbench.action.focusLeftGroup"] },
+    { "before": ["leader", "j"], "commands": ["workbench.action.focusBelowGroup"] },
+    { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] },
+    { "before": ["leader", "k"], "commands": ["workbench.action.focusAboveGroup"] },
+
+    // file explorer
+    { "before": ["leader", "e"], "commands": ["workbench.explorer.fileView.focus"] }
+],
