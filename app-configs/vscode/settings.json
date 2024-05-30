@@ -1,5 +1,8 @@
 // Vim
 "vim.leader": "<Space>",
+"vim.handleKeys": {
+    "<C-b>": false,
+},
 "vim.normalModeKeyBindingsNonRecursive": [
     // Switch buffers
     { "before": ["<S-h>"], "commands": [":bp"] },

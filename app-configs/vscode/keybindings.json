@@ -33,6 +33,15 @@
         "when": "filesExplorerFocus && !inputFocus"
     },
     {
+        "key": "ctrl+j",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
         // Bounces back to the editor from file explorer
         "key": "Space e",
         "command": "workbench.action.focusActiveEditorGroup",
