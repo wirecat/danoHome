@@ -12,11 +12,17 @@
     { "before": ["leader", "v"], "commands": [":vsplit"] },
     { "before": ["leader", "s"], "commands": [":split"] },
 
-    // panes
+    // Panes
     { "before": ["leader", "h"], "commands": ["workbench.action.focusLeftGroup"] },
     { "before": ["leader", "j"], "commands": ["workbench.action.focusBelowGroup"] },
     { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] },
     { "before": ["leader", "k"], "commands": ["workbench.action.focusAboveGroup"] },
+
+    // Move editors between panes
+    { "before": ["leader", "<S-h>"], "commands": ["workbench.action.moveEditorToLeftGroup"]},
+    { "before": ["leader", "<S-j>"], "commands": ["workbench.action.moveEditorToBelowGroup"]},
+    { "before": ["leader", "<S-k>"], "commands": ["workbench.action.moveEditorToAboveGroup"]},
+    { "before": ["leader", "<S-l>"], "commands": ["workbench.action.moveEditorToRightGroup"]},
 
     // file explorer
     { "before": ["leader", "e"], "commands": ["workbench.explorer.fileView.focus"] }
