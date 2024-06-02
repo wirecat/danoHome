@@ -46,6 +46,27 @@
         "key": "Space e",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "filesExplorerFocus && !inputFocus"
+    },
+
+    // More intuitive goto definition/implementation
+    {
+        "key": "cmd+k d",
+        "command": "-workbench.files.action.compareWithSaved"
+    },
+    {
+        "key": "cmd+k cmd+d",
+        "command": "-editor.action.moveSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+k d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus"
+    },
+    {
+        "key": "cmd+k cmd+d",
+        "command": "editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus"
     }
 
     // Others
