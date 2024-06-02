@@ -1,6 +1,6 @@
 // Place your key bindings in this file to override the defaults
 [
-    // Togglign the activity bar
+    // Toggling the activity bar
     {
         "key": "shift+cmd+a",
         "command": "-notification.acceptPrimaryAction",
@@ -36,16 +36,16 @@
         "key": "ctrl+j",
         "command": "workbench.action.terminal.focus"
     },
+
+    // Bounces back to the editor from file explorer
+    {
+        "key": "ctrl+k",
+        "command": "-deleteAllRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
     {
         "key": "ctrl+k",
         "command": "workbench.action.focusActiveEditorGroup",
-        "when": "terminalFocus"
-    },
-    {
-        // Bounces back to the editor from file explorer
-        "key": "Space e",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "filesExplorerFocus && !inputFocus"
     },
 
     // More intuitive goto definition/implementation
@@ -68,6 +68,5 @@
         "command": "editor.action.goToImplementation",
         "when": "editorHasImplementationProvider && editorTextFocus"
     }
-
     // Others
 ]
